@@ -3,6 +3,7 @@
 An immersive, interactive 3D WebGL web application that lets users rotate a realistic Earth globe, click on cities, and immediately stream live local radio feeds. Built with a modern, high-performance React + Vite stack, the project leverages Three.js for rendering and HLS.js for worldwide audio compatibility.
 
 ---
+## App link - https://kaleidoscopic-smakager-1234c2.netlify.app/
 
 ## ✨ Features
 
