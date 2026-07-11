@@ -1,0 +1,24 @@
+# Netlify Configuration File
+
+[build]
+  # The command to compile the React/Vite app
+  command = "npm run build"
+  
+  # The output directory where Vite generates the built files
+  publish = "dist"
+
+# Redirect rules to handle Single Page Application (SPA) routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Set custom headers for browser performance and security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "same-origin"
+    # Allow streaming audio connections
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://unpkg.com; media-src 'self' blob: *; connect-src 'self' https://de1.api.radio-browser.info https://nl1.api.radio-browser.info https://at1.api.radio-browser.info *;"
